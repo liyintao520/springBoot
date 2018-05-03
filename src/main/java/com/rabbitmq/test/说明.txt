@@ -1,4 +1,10 @@
 RabbitMQ:
+                    这些都是默认的
+            ConnectionFactory factory = new ConnectionFactory();
+            factory.setHost("localhost");
+            factory.setUsername("guest");
+            factory.setPassword("guest");
+            factory.setPort(5672);
 RabbitMQ入门教程
     一共分为五种类型
     1、普通的   Hello World  - 你好世界！
@@ -8,5 +14,21 @@ RabbitMQ入门教程
         在上一章中，我们学习创建了一个消息队列，她的每个任务消息只发送给一个工人。这一章，我们会将同一个任务消息发送给多个工人。这种模式就是“发布/订阅”。
 
     4、Routing - 消息路由
-    5、Remote procedure call (RPC) - 远程调用
+        直连模式工作。
+    5、Topic--Topic模式【匹配模式】
+        交换器在匹配模式下：
+
+        如果消费者端的路由关键字只使用【#】来匹配消息，在匹配【topic】模式下，它会变成一个分发【fanout】模式，接收所有消息。
+
+        如果消费者端的路由关键字中没有【#】或者【*】，它就变成直连【direct】模式来工作。
+
+         * 先运行ReceiveLogsTopic1.java
+         * 再运行ReceiveLogsTopic2
+         * 然后运行TopicSend.java发送7条消息
+         * 再看ReceiveLogsTopic1.java，收到3条匹配的消息。
+         * 再看ReceiveLogsTopic2.java，收到4条匹配的消息。
+
+
+    6、Remote procedure call (RPC) - 远程调用
+
 

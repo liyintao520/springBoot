@@ -11,7 +11,7 @@ import java.io.IOException;
  */
 public class C {
 
-    private final static String QUEUE_NAME = "liyintao";
+    private final static String QUEUE_NAME = "liyintao"; // Hello World
 
     public static void main(String[] argv) throws Exception {
         // 创建连接工厂

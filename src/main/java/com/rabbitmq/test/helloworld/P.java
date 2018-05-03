@@ -12,7 +12,7 @@ import com.rabbitmq.client.ConnectionFactory;
 
 public class P {
 
-    private final static String QUEUE_NAME = "liyintao";
+    private final static String QUEUE_NAME = "liyintao"; // Hello World
 
     public static void main(String[] argv) throws Exception {
         // 创建连接工厂

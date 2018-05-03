@@ -27,6 +27,7 @@ public class NewTask {
         for (int i = 0; i < 500; i++) {
             String message = "Hello World! " + i;
             channel.basicQos(prefetchCount);
+            //TODO  RabbitMQ选择了一个空“”字符串的默认交换器
             channel.basicPublish("", TASK_QUEUE_NAME, MessageProperties.PERSISTENT_TEXT_PLAIN, message.getBytes());
             System.out.println(" 启动工厂任务安排者（生产者）：【" + message + "】");
 
