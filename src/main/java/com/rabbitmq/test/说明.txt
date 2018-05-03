@@ -1,0 +1,12 @@
+RabbitMQ:
+RabbitMQ入门教程
+    一共分为五种类型
+    1、普通的   Hello World  - 你好世界！
+    2、工作队列  Work Queues
+
+    3、Publish/Subscribe - 发布/订阅
+        在上一章中，我们学习创建了一个消息队列，她的每个任务消息只发送给一个工人。这一章，我们会将同一个任务消息发送给多个工人。这种模式就是“发布/订阅”。
+
+    4、Routing - 消息路由
+    5、Remote procedure call (RPC) - 远程调用
+
