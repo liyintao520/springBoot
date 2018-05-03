@@ -1,4 +1,4 @@
-RabbitMQ:
+RabbitMQ:啊啊
                     这些都是默认的
             ConnectionFactory factory = new ConnectionFactory();
             factory.setHost("localhost");
