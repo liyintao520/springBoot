@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="319be6fa-fa2a-48b1-bad4-f06849d649d9" name="Default" comment="">
+    <list default="true" id="319be6fa-fa2a-48b1-bad4-f06849d649d9" name="Default" comment="测试">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/rabbitmq/test/新建文本文档.txt" afterPath="$PROJECT_DIR$/src/main/java/com/rabbitmq/test/新建文本文档.txt" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,15 +26,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Application.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Application.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/liyintao/springboot/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
-              <caret line="8" column="44" lean-forward="true" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+            <state relative-caret-position="199">
+              <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#246#247#0" expanded="true" />
                 <element signature="e#299#300#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="新建文本文档.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/rabbitmq/test/新建文本文档.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="21" lean-forward="true" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -52,6 +64,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/com/rabbitmq/test/说明.txt" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rabbitmq/test/新建文本文档.txt" />
       </list>
     </option>
   </component>
@@ -226,7 +239,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -640,7 +653,7 @@
       <updated>1525347873403</updated>
       <workItem from="1525347877128" duration="1828000" />
       <workItem from="1525398342232" duration="867000" />
-      <workItem from="1525399508757" duration="351000" />
+      <workItem from="1525399508757" duration="1597000" />
     </task>
     <task id="LOCAL-00001" summary="才">
       <created>1525348638715</created>
@@ -691,11 +704,18 @@
       <option name="project" value="LOCAL" />
       <updated>1525399666307</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="才1">
+      <created>1525399880984</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1525399880984</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3046000" />
+    <option name="totallyTimeSpent" value="4292000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
@@ -768,7 +788,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="才" />
-    <option name="LAST_COMMIT_MESSAGE" value="才" />
+    <MESSAGE value="才1" />
+    <option name="LAST_COMMIT_MESSAGE" value="才1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -805,12 +826,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/liyintao/springboot/Application.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="8" column="44" lean-forward="true" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+        <state relative-caret-position="199">
+          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#246#247#0" expanded="true" />
             <element signature="e#299#300#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rabbitmq/test/新建文本文档.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="21" lean-forward="true" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
