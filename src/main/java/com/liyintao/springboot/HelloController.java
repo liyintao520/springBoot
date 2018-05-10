@@ -1,5 +1,7 @@
 package com.liyintao.springboot;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -9,8 +11,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping(value = "/demo")
 public class HelloController {
-    @RequestMapping(value = "/hello")
+
+    // @Value("${fruit.name}")
+    private String name = "";
+
+//    @RequestMapping(value = "/hello")
+    @GetMapping("/hello")
     public String hello(){
-        return "hello";
+        return "测试springBoot启动成功！！！" + this.name;
     }
 }

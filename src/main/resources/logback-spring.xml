@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!-- 日志格式
+        2018-04-08 12:16:39.593 |-INFO  [restartedMain] org.apache.tomcat.util.net.NioSelectorPool [180] -| Using a shared selector for servlet write/read
+     -->
+    <property name="DEF_PATTERN" value="%-12(%d{yyyy-MM-dd HH:mm:ss.SSS}) |-%-5level [%thread] %c [%L] -| %msg%n" />
+    <!-- 日志格式
+        [INFO ] per.yuan.spring.controller.BlogController [30] [2018-04-10 10:04:13.786]
+        ->>  msg msg msg
+     -->
+    <property name="DEV_PATTERN" value="[%-5level] %c [%L] [%-12(%d{yyyy-MM-dd HH:mm:ss.SSS})] %n -->>  %msg%n" />
+    <!-- 测试环境下，日志文件路径 -->
+    <property name="TEST_FILE_PATH" value="d:/SpringBoot-test.log" />
+
+    <!-- 开发环境 -->
+    <springProfile name="dev">
+        <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+            <encoder>
+                <pattern>${DEV_PATTERN}</pattern>
+            </encoder>
+        </appender>
+        <logger name="com.light.springboot" level="debug" />
+        <root level="info">
+            <appender-ref ref="CONSOLE" />
+        </root>
+    </springProfile>
+
+    <!-- 测试环境 -->
+    <springProfile name="test">
+        <!-- 每天产生一个文件 -->
+        <appender name="TEST-FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <!-- 文件路径 -->
+            <file>${TEST_FILE_PATH}</file>
+            <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+                <!-- 文件名称 -->
+                <fileNamePattern>${TEST_FILE_PATH}/info.%d{yyyy-MM-dd}.log</fileNamePattern>
+                <!-- 文件最大保存历史数量 -->
+                <MaxHistory>100</MaxHistory>
+            </rollingPolicy>
+            <layout class="ch.qos.logback.classic.PatternLayout">
+                <pattern>${DEF_PATTERN}</pattern>
+            </layout>
+        </appender>
+        <root level="info">
+            <appender-ref ref="TEST-FILE" />
+        </root>
+    </springProfile>
+</configuration>
