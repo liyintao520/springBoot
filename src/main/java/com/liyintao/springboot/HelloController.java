@@ -16,6 +16,11 @@ public class HelloController {
     private String name = "";
 
 //    @RequestMapping(value = "/hello")
+
+    /**
+     * http://localhost:8080/demo/hello
+     * @return
+     */
     @GetMapping("/hello")
     public String hello(){
         return "测试springBoot启动成功！！！" + this.name;
