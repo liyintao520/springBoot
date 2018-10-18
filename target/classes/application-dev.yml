@@ -1,0 +1,18 @@
+#test read ymlfile
+fruit:
+    name: apple
+    amount: 66
+
+#测试环境
+spring:
+    profiles: dev
+#servers setting
+server:
+    port: 8080
+    address: localhost
+    context-path: /dev
+
+#微信官方提供的测试账号
+weixin:
+  APPID: wxc22f2f92f9aaeb1a
+  APPSECRET: e0f7dba756bb8212615d4f6b8d3d1553

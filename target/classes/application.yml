@@ -1,0 +1,17 @@
+#spring profiles
+spring:
+    #http encoding
+    http:
+        encoding:
+          charset: UTF-8
+          enable: true
+          force: true
+   #profiles
+    profiles:
+      active: dev
+
+# LOGGING
+logging:
+  # 日志默认配置文件:classpath:logback-spring.xml/classpath:logback-spring.groovy,也可以用以下字段自定义配置
+  config:
+    classpath: logback-spring.xml

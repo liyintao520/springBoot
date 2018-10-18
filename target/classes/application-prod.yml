@@ -1,0 +1,13 @@
+#test read ymlfile
+fruit:
+    name: apple
+    amount: 888
+
+#开发环境
+spring:
+    profiles: prod
+#servers setting
+server:
+    port: 8088
+    address: localhost
+    context-path: /dev
