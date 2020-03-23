@@ -1,13 +1,20 @@
-#test read ymlfile
-fruit:
-    name: apple
-    amount: 888
-
-#开发环境
-spring:
-    profiles: prod
 #servers setting
 server:
-    port: 8088
+    port: 8080
     address: localhost
-    context-path: /dev
+
+fruit:
+  name: prod-apple
+  amount: 888
+
+#微信官方提供的测试账号
+weixin:
+  APPID: wxc22f2f92f9aaeb1a
+  APPSECRET: e0f7dba756bb8212615d4f6b8d3d1553
+
+
+# LOGGING
+logging:
+  # 日志默认配置文件:classpath:logback-spring.xml/classpath:logback-spring.groovy,也可以用以下字段自定义配置
+  config:
+    classpath: logback-spring.xml

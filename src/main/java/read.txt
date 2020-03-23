@@ -1,0 +1,18 @@
+学习安排：
+    1、B站收藏视频要看完。https://space.bilibili.com/393184514/favlist
+    2、小马哥的两个视频要看完
+        https://segmentfault.com/ls/1650000018643651/l/1500000018003713
+        https://segmentfault.com/ls/1650000018635092
+    3、小马哥的书来之前，把SpringBoot相关视频看完。
+
+
+完成情况：
+    小马哥并发看完了。
+    B站RabbitMq看完了。
+    尚硅谷 SpringBoot视频教程待看中。https://www.bilibili.com/video/av38657363
+
+
+
+
+
+    1.https://www.bilibili.com/video/av38657363/?p=6

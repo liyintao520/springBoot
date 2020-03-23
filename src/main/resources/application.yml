@@ -9,9 +9,6 @@ spring:
    #profiles
     profiles:
       active: dev
+#      active: prod
 
-# LOGGING
-logging:
-  # 日志默认配置文件:classpath:logback-spring.xml/classpath:logback-spring.groovy,也可以用以下字段自定义配置
-  config:
-    classpath: logback-spring.xml
+

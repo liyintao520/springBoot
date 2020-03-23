@@ -1,18 +1,87 @@
-#test read ymlfile
-fruit:
-    name: apple
-    amount: 66
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8761/eureka/
+#    preferSameZoneEureka: true
+#  registry-fetch-interval-seconds: 4000
+#  instance:
+#    prefer-ip-address: true
+#    lease-renewal-interval-in-seconds: 2
+#    lease-expiration-duration-in-seconds: 4
+#    metadataMap:
+#      zone: zone1
+#    instance-id: ${spring.cloud.client.ipAddress}:${server.port}:${spring.application.name}:@project.version@
 
-#测试环境
-spring:
-    profiles: dev
-#servers setting
 server:
-    port: 8080
-    address: localhost
-    context-path: /dev
+  port: 8080
+  tomcat:
+    access-log-pattern: checkserver--%h %l %u %t "%r" %s %b (%D ms)
+    # log pattern of the access log
+    access-log-enabled: true
+    accesslog:
+      directory: /opt/deployjars/login/logs/
+
+#datasource config
+jdbc:
+  driverClassName: com.mysql.jdbc.Driver
+  url: jdbc:mysql://rm-m5egkj1qipk6562yv9o.mysql.rds.aliyuncs.com:3306/wcqf?zeroDateTimeBehavior=convertToNull&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
+  username: root
+  password: 'wuche#File@2018'
+  initialSize: 10
+  maxActive: 200
+#mybatis config
+mybatis:
+  typeAliasesPackage: org.cloud.demo.service.model
+  mapperLocations: classpath:mappings/**/*.xml
+  config-location: classpath:mybatis-config.xml
+  #callSettersOnNulls: true
+  configuration:
+    call-setters-on-nulls: true
+spring:
+  redis:
+    hostName: 47.105.80.12 # Redis服务器地址
+    port: 6379 # Redis服务器连接端口
+    password: 'q!w@e#r$' # Redis服务器连接密码（默认为空）
+    timeout: 5000
+    encode: utf-8
+    pool:
+      maxIdle: 300
+      maxTotal: 600
+      timeBetweenEvictionRunsMillis: 30000
+      minEvictableIdleTimeMillis: 30000
+      testOnBorrow: true
+  http:
+    multipart:
+      max-file-size: 10Mb
+      max-request-size: 100Mb
+
+  #RabbitMQ
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    publisher-confirms: true
+    virtual-host: /freepie
+    username: freetest
+    password: test123
+
+#每页显示多少
+pageSize: 10
+
+fruit:
+  name: dev-apple
+  amount: 888
 
 #微信官方提供的测试账号
 weixin:
   APPID: wxc22f2f92f9aaeb1a
   APPSECRET: e0f7dba756bb8212615d4f6b8d3d1553
+
+
+# LOGGING
+logging:
+  # 日志默认配置文件:classpath:logback-spring.xml/classpath:logback-spring.groovy,也可以用以下字段自定义配置
+  config:
+    classpath: logback-spring.xml
+  level:
+    com:
+      wcwl: debug
