@@ -26,6 +26,9 @@
 		<!-- jdbc driver setting -->
 		<mysql.driver.version>6.0.6</mysql.driver.version>
 
+		<fastjson.version>1.2.70</fastjson.version>
+		<lombok.version>1.18.12</lombok.version>
+
 	</properties>
 
 	<dependencies>
@@ -49,6 +52,12 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+		<!-- 支持Thymeleaf模板 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.kafka</groupId>
 			<artifactId>spring-kafka</artifactId>
@@ -73,10 +82,21 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>${mysql.driver.version}</version>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>fastjson</artifactId>
-			<version>1.1.40</version>
+			<version>${fastjson.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>${lombok.version}</version>
+			<!-- 如果不注释掉 my-shop引入不进来这个包， 不注释掉的话 my-shop 需要添加引入这个包 -->
+			<!--<scope>provided</scope>-->
 		</dependency>
 	</dependencies>
 

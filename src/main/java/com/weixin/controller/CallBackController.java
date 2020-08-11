@@ -2,9 +2,9 @@ package com.weixin.controller;
 
 import com.alibaba.fastjson.JSONObject;
 import com.weixin.utils.AuthUtil;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.weixin.utils.JsonUtil;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -15,11 +15,11 @@ import java.net.URLEncoder;
 /**
  * Created by liyintao on 2018/10/16.
  */
-@RestController
+@Controller
 public class CallBackController {
 
-    @GetMapping("/WxAuth/callBack")
-    public String hello(HttpServletRequest req, HttpServletResponse resp){
+    @RequestMapping("/WxAuth/callBack")
+    public String callBack(HttpServletRequest req, HttpServletResponse resp){
 //        wutcc4.natappfree.cc
 //    	微信回调的时候回带过来这个参数-------
 //    	第二步：通过code换取网页授权access_token
@@ -41,13 +41,14 @@ public class CallBackController {
                     + "&lang=zh_CN";
             JSONObject userInfo = AuthUtil.doGetJson(infoUrl);
             System.err.println("从微信获取到的用户基本信息：" + userInfo);
-
             //1、使用微信用户信息直接登录，无序注册和绑定
+            // 可以不写，这样返回页面。
             req.setAttribute("info", userInfo);
-            req.getRequestDispatcher("/index1.jsp").forward(req, resp);
+//            req.getRequestDispatcher("success").forward(req, resp);
+            return "success";
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return "李银涛测试springBoot回调成功成功！！！" ;
+        return null;
     }
 }

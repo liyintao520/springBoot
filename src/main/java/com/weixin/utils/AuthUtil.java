@@ -14,8 +14,8 @@ import java.io.IOException;
  */
 public class AuthUtil {
 	// 官方微信提供的测试账号【https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1421137522】接口测试号申请
-    public static final String APPID = "wxc22f2f92f9aaeb1a";
-    public static final String APPSECRET = "e0f7dba756bb8212615d4f6b8d3d1553";
+    public static final String APPID = "wx93ab8bc78863eddd";
+    public static final String APPSECRET = "f3ba90aa933c1671542f5cc3767a5734";
 	// 陶承波提供的
 	/*public static final String APPID = "wx77f0316147d3c190";
     public static final String APPSECRET = "2611955ebb2ee9b12d199d5c82c8cbdd";*/
@@ -34,7 +34,8 @@ public class AuthUtil {
             String result = EntityUtils.toString(entity, "UTF-8");
             jsonObject = JSONObject.parseObject(result);
         }
-        httpGet.releaseConnection(); // 释放连接
+        // 释放连接
+        httpGet.releaseConnection();
         return jsonObject;
     }
 }

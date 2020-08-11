@@ -1,17 +1,3 @@
-#eureka:
-#  client:
-#    serviceUrl:
-#      defaultZone: http://localhost:8761/eureka/
-#    preferSameZoneEureka: true
-#  registry-fetch-interval-seconds: 4000
-#  instance:
-#    prefer-ip-address: true
-#    lease-renewal-interval-in-seconds: 2
-#    lease-expiration-duration-in-seconds: 4
-#    metadataMap:
-#      zone: zone1
-#    instance-id: ${spring.cloud.client.ipAddress}:${server.port}:${spring.application.name}:@project.version@
-
 server:
   port: 8080
   tomcat:
@@ -38,6 +24,16 @@ mybatis:
   configuration:
     call-setters-on-nulls: true
 spring:
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  thymeleaf:
+    mode: HTML5
+    cache: false
+    encoding: UTF-8
+    prefix: classpath:/templates/
+    suffix: .html
+
   redis:
     hostName: 47.105.80.12 # Redis服务器地址
     port: 6379 # Redis服务器连接端口
@@ -73,8 +69,8 @@ fruit:
 
 #微信官方提供的测试账号
 weixin:
-  APPID: wxc22f2f92f9aaeb1a
-  APPSECRET: e0f7dba756bb8212615d4f6b8d3d1553
+  APPID: wx93ab8bc78863eddd
+  APPSECRET: f3ba90aa933c1671542f5cc3767a5734
 
 
 # LOGGING
