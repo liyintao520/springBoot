@@ -41,10 +41,17 @@ public class CallBackController {
                     + "&lang=zh_CN";
             JSONObject userInfo = AuthUtil.doGetJson(infoUrl);
             System.err.println("从微信获取到的用户基本信息：" + userInfo);
+            //  https://api.weixin.qq.com/sns/auth?access_token=ACCESS_TOKEN&openid=OPENID
+            // 第五步：检验授权凭证（access_token）是否有效
+            JSONObject obj = AuthUtil.doGetJson("https://api.weixin.qq.com/sns/auth?access_token=" + token + "&openid=" + openid);
+            if ("0".equals(obj.get("errcode"))) {
+                System.out.println("校验结果：" + obj.get("errmsg"));
+            }
+
             //1、使用微信用户信息直接登录，无序注册和绑定
             // 可以不写，这样返回页面。
             req.setAttribute("info", userInfo);
-//            req.getRequestDispatcher("success").forward(req, resp);
+            req.getRequestDispatcher("/success.html").forward(req, resp);
             return "success";
         } catch (Exception e) {
             e.printStackTrace();

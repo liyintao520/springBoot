@@ -29,12 +29,13 @@ public class LoginController {
             // 传给微信的回调地址http://10.105.0.28:8080/
             // 陶承波的域名地址
 //    	String backUrl = "http://wx.yogapay.com/WxAuth/wxCallBack";
-            // 本地映射到公网的域名+路径 http://dnkw2t.natappfree.cc/WxAuth/callBack
-            String backUrl = "http://dnkw2t.natappfree.cc/WxAuth/callBack"; // 回调地址
+            // 本地映射到公网的域名+路径 http://wxzr6z.natappfree.cc/WxAuth/callBack
+            String backUrl = "http://wxzr6z.natappfree.cc/WxAuth/callBack"; // 回调地址
             // 访问的作用域范围
             // 第一步：用户同意授权，获取code【https://open.weixin.qq.com/connect/oauth2/authorize?appid=APPID&redirect_uri=REDIRECT_URI&response_type=code&scope=SCOPE&state=STATE#wechat_redirect】
             // 【snsapi_userinfo】弹出用户同意拒绝对话框，可以获取用户基本信息。【snsapi_base】默认直接同意，获取用户的openid
             String scope = "snsapi_userinfo"; // snsapi_base
+//            String scope = "snsapi_base"; // snsapi_base
             String url = "https://open.weixin.qq.com/connect/oauth2/authorize?appid="
                     + AuthUtil.APPID
                     + "&redirect_uri=" + URLEncoder.encode(backUrl)

@@ -24,8 +24,8 @@ public class LoginServlet extends HttpServlet {
        // 传给微信的回调地址http://10.105.0.28:8080/
        // 陶承波的域名地址
 //    	String backUrl = "http://wx.yogapay.com/WxAuth/wxCallBack"; 
-    	// 本地映射到公网的域名+路径 http://dnkw2t.natappfree.cc/WxAuth/wxCallBack
-    	String backUrl = "http://dnkw2t.natappfree.cc/WxAuth/callBack";   //  回调地址
+    	// 本地映射到公网的域名+路径 http://wxzr6z.natappfree.cc/WxAuth/wxCallBack
+    	String backUrl = "http://wxzr6z.natappfree.cc/WxAuth/callBack";   //  回调地址
     	// 访问的作用域范围
         String scope = "snsapi_userinfo"; // snsapi_base
         String url = "https://open.weixin.qq.com/connect/oauth2/authorize?appid="
