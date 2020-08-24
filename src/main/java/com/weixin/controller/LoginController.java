@@ -18,12 +18,16 @@ import java.net.URLEncoder;
  */
 @Slf4j
 @RestController
-@RequestMapping(value = "/WxAuth")
+//@RequestMapping(value = "/WxAuth")
 public class LoginController {
 
-//    @PostMapping("/WxAuth/wxLogin")
-    @GetMapping("/wxLogin")
-    public String hello(HttpServletResponse resp){
+    /**
+     * 微信授权登录
+     * @param resp
+     * @return
+     */
+    @GetMapping("/WxAuth/wxLogin")
+    public String wxLogin(HttpServletResponse resp){
         try {
             System.out.println("开始调用微信接口....");
             // 传给微信的回调地址http://10.105.0.28:8080/
@@ -50,4 +54,19 @@ public class LoginController {
         }
         return "李银涛测试springBoot启动成功！！！" ;
     }
+
+    /**
+     * qq授权登录
+     * @param resp
+     * @return
+     */
+    @GetMapping("/qqAuth/qqLogin")
+    public String qqLogin(HttpServletResponse resp){
+
+        return "qq授权登录！";
+    }
+
+
+
+
 }

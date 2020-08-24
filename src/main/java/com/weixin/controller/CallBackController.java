@@ -4,7 +4,9 @@ import com.alibaba.fastjson.JSONObject;
 import com.weixin.utils.AuthUtil;
 import com.weixin.utils.JsonUtil;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -19,7 +21,7 @@ import java.net.URLEncoder;
 public class CallBackController {
 
     @RequestMapping("/WxAuth/callBack")
-    public String callBack(HttpServletRequest req, HttpServletResponse resp){
+    public String callBack(HttpServletRequest req, HttpServletResponse resp, Model model){
 //        wutcc4.natappfree.cc
 //    	微信回调的时候回带过来这个参数-------
 //    	第二步：通过code换取网页授权access_token
@@ -50,12 +52,13 @@ public class CallBackController {
 
             //1、使用微信用户信息直接登录，无序注册和绑定
             // 可以不写，这样返回页面。
-            req.setAttribute("info", userInfo);
-            req.getRequestDispatcher("/success.html").forward(req, resp);
+//            resp.setAttribute("info", userInfo);
+//            req.getRequestDispatcher("/success.html").forward(req, resp);
+            model.addAttribute("info", userInfo);
             return "success";
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return null;
+        return "";
     }
 }

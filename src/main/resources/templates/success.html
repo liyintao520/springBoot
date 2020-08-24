@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- 需要引用该标签进行获取值 -->
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -7,10 +8,10 @@
     <title>首页</title>
 </head>
 <body>
-    <input type="text" value=<%=request.getAttribute('info');%>/>
     <div>登录成功</div>
-    <div>用户名：${info.nickname}</div>
-    <div>用户头像：<img style="vertical-align: top" width="100" alt = "" src = "${info.headimgurl}"></div>
-    <div>openId：${info.openid}</div>
+<!--    <div>用户名：${info.nickname}</div>-->
+<!--    <div>用户头像：<img style="vertical-align: top" width="100" alt = "" src = "${info.headimgurl}"></div>-->
+<!--    <div>openId：${info.openid}</div>-->
+    <p th:text="${info.nickname}"></p>
 </body>
 </html>
