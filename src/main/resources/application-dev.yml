@@ -10,9 +10,11 @@ server:
 #datasource config
 jdbc:
   driverClassName: com.mysql.jdbc.Driver
-  url: jdbc:mysql://rm-m5egkj1qipk6562yv9o.mysql.rds.aliyuncs.com:3306/wcqf?zeroDateTimeBehavior=convertToNull&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
+#  url: jdbc:mysql://rm-m5egkj1qipk6562yv9o.mysql.rds.aliyuncs.com:3306/wcqf?zeroDateTimeBehavior=convertToNull&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
+  url: jdbc:mysql://150.138.142.14:13308/fznxdb?zeroDateTimeBehavior=convertToNull&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
   username: root
-  password: 'wuche#File@2018'
+#  password: 'wuche#File@2018'
+  password: '123456'
   initialSize: 10
   maxActive: 200
 #mybatis config
