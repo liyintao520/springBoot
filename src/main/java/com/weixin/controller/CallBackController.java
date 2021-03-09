@@ -52,9 +52,15 @@ public class CallBackController {
 
             //1、使用微信用户信息直接登录，无序注册和绑定
             // 可以不写，这样返回页面。
+            // 可以不写，这样返回页面。
 //            resp.setAttribute("info", userInfo);
 //            req.getRequestDispatcher("/success.html").forward(req, resp);
             model.addAttribute("info", userInfo);
+
+            // 2、将微信与当前账号进行绑定
+
+
+
             return "success";
         } catch (Exception e) {
             e.printStackTrace();
