@@ -26,7 +26,7 @@
 		<!-- jdbc driver setting -->
 		<mysql.driver.version>6.0.6</mysql.driver.version>
 
-		<fastjson.version>1.2.70</fastjson.version>
+		<fastjson.version>1.2.83</fastjson.version>
 		<lombok.version>1.18.12</lombok.version>
 
 	</properties>
